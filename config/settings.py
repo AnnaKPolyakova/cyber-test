@@ -7,4 +7,5 @@ include(
     "components/debug.py",
     "components/database.py",
     "components/media_and_static.py",
+    "components/users.py",
 )
