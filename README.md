@@ -1,7 +1,7 @@
 # cyber-test
 
 Technologies and requirements:
-Python 3.11
+Python 3.10
 django 4.2.7
 Poetry
 Postgresql
@@ -11,10 +11,9 @@ Postgresql
 API for app todo list  
 
 ### To create .env
-* `Create .env file using .env_example`  
+* `Create .env file using .env_example`
 
 ### Instruction for local run
-* `Create venv`
 * `python3 -m venv venv` - create venv 
 * `source venv/bin/activate` - activate venv  
 * `pip install poetry` - install poetry
@@ -24,6 +23,7 @@ API for app todo list
   postgresql in docker container
 * `python3 manage.py runserver --settings=config.settings_local` - run app
 * `python3 manage.py migrate --settings=config.settings_local` - migrate
+* `python3 manage.py createsuperuser --settings=config.settings_local` - to create superuser
 * `pytest` - run tests
 
 #### To stop the container and remove volumes:
