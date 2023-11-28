@@ -16,7 +16,7 @@ api_schema_patterns = [
     path("", SpectacularAPIView.as_view(), name="schema"),
     # Optional UI:
     path(
-        "swagger-ui/",
+        "swagger/",
         SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger-ui",
     ),

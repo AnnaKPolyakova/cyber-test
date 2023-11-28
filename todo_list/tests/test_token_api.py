@@ -2,8 +2,12 @@ from http import HTTPStatus
 
 import pytest
 
-from todo_list.tests.conftest import TOKEN_URL, PASSWORD, ERROR_INFO, \
-    REFRESH_TOKEN_URL
+from todo_list.tests.conftest import (
+    ERROR_INFO,
+    PASSWORD,
+    REFRESH_TOKEN_URL,
+    TOKEN_URL,
+)
 
 pytestmark = pytest.mark.django_db
 
@@ -26,15 +30,14 @@ class TestTokenAPI:
                 method=method, url=url, status=status
             )
 
-    def test_get_refresh_token_url(self, guest_client, user):
+    def test_get_refresh_token_url(
+        self, guest_client, user, user_refresh_token
+    ):
         tokens = ["refresh", "access"]
         url = REFRESH_TOKEN_URL
         method = "post"
         status = HTTPStatus.OK
-        data = {"username": user.username, "password": PASSWORD}
-        response = getattr(guest_client, method)(TOKEN_URL, data=data)
-        refresh = response.data["refresh"]
-        data = {"refresh": refresh}
+        data = {"refresh": user_refresh_token}
         response = getattr(guest_client, method)(url, data=data)
         assert response.status_code == status, ERROR_INFO.format(
             method=method, url=url, status=status

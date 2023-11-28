@@ -1,11 +1,11 @@
-import datetime
 import random
 
 import factory
+import pytz
 from django.contrib.auth import get_user_model
-from django.db.models import Q
+from faker import Faker
 
-from todo_list.models import Task, Job
+from todo_list.models import Job, Task
 
 User = get_user_model()
 
@@ -20,7 +20,11 @@ class TaskFactory(factory.django.DjangoModelFactory):
         lambda a: "{}.{}".format(a.name_word, random.random())
     )
     user = factory.Iterator(User.objects.all())
-    created_at = factory.Faker("datetime_this_year")
+
+    @factory.lazy_attribute
+    def created_at(self):
+        fake = Faker()
+        return fake.date_time_this_year(tzinfo=pytz.timezone("Europe/Moscow"))
 
 
 class JobFactory(factory.django.DjangoModelFactory):
@@ -38,5 +42,8 @@ class JobFactory(factory.django.DjangoModelFactory):
     @factory.lazy_attribute
     def done_at(self):
         if self.is_done:
-            return factory.Faker("datetime_this_year")
-        return
+            fake = Faker()
+            return fake.date_time_this_year(
+                tzinfo=pytz.timezone("Europe/Moscow")
+            )
+        return None

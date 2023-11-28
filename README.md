@@ -67,9 +67,9 @@ Admin panel available
 To open documentation:
 
 local:  
-http://127.0.0.1:8000/v1/doc/redoc/  
-http://127.0.0.1:8000/v1/doc/swagger/  
+http://127.0.0.1:8000/api/v1/schema/redoc/
+http://127.0.0.1:8000/api/v1/schema/swagger/  
 
 docker:  
-http://127.0.0.1/v1/doc/redoc/  
-http://127.0.0.1/v1/doc/swagger/  
+http://127.0.0.1/api/v1/schema/redoc/  
+http://127.0.0.1/api/v1/schema/swagger/  

@@ -66,3 +66,11 @@ class Job(models.Model):
         else:
             self.is_done = True
         super().save(*args, **kwargs)
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name = "Job"
+        verbose_name_plural = "Jobs"
+
+    def __str__(self):
+        return self.name
