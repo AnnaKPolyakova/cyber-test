@@ -17,10 +17,11 @@ TASKS_API_URL = reverse("tasks-list")
 TASK_API_URL = "tasks-detail"
 JOBS_API_URL = reverse("jobs-list")
 JOB_API_URL = "jobs-detail"
+USER_REG_API_URL = reverse("registration")
 
 
 EMAIL = "Test@test.ru"
-PASSWORD = "Test"
+PASSWORD = "TestTest"
 
 EMAIL_2 = "Test2@test.ru"
 PASSWORD_2 = "Test"
