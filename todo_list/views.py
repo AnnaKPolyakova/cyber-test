@@ -54,6 +54,7 @@ class JobViewSet(ModelViewSet):
         IsAuthenticated,
         IsJobOwnerPermission,
     )
+    filterset_fields = ["task"]
 
     def get_queryset(self):
         return Job.objects.filter(task__user=self.request.user)

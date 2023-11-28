@@ -8,7 +8,26 @@ Postgresql
 
 ### About
 
-API for app todo list  
+API for app todo list
+
+1) Users:  
+Any can register a user and receive a token for him
+<br>
+<br>
+2) Tasks: 
+Any registered user can:  
+- create, delete his own task, 
+- get a list of  his tasks, 
+- get information about his task by id  
+
+3) Jobs: 
+Any registered user can:
+- the user can add, change, delete job to his task
+- get a list of  his job with filter by task, 
+- get information about his task by id
+"is_done" field is set to automatic based on the value in the field "done_at"
+
+Admin panel available
 
 ### To create .env
 * `Create .env file using .env_example`
