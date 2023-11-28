@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cyber-test"
+name = "todo_list"
 version = "0.1.0"
 description = ""
 authors = ["Анна Полякова <Sova040888@yandex.ru>"]
@@ -23,6 +23,7 @@ psycopg2 = "^2.9.9"
 gunicorn = "^21.2.0"
 flake8 = "^6.1.0"
 django-filter = "^23.4"
+factory-boy = "^3.3.0"
 
 
 [build-system]
