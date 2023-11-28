@@ -29,10 +29,8 @@ Any registered user can:
 
 Admin panel available
 
-### To create .env
-* `Create .env file using .env_example`
-
 ### Instruction for local run
+* `Create .env file using .env_example_for_local`
 * `python3 -m venv venv` - create venv 
 * `source venv/bin/activate` - activate venv  
 * `pip install poetry` - install poetry
@@ -40,9 +38,9 @@ Admin panel available
 * `docker network create todolist` - create network
 * `docker-compose -f docker-compose-local.yaml up -d --build` - run 
   postgresql in docker container
-* `python3 manage.py runserver --settings=config.settings_local` - run app
 * `python3 manage.py migrate --settings=config.settings_local` - migrate
 * `python3 manage.py createsuperuser --settings=config.settings_local` - to create superuser
+* `python3 manage.py runserver --settings=config.settings_local` - run app
 * `pytest` - run tests
 
 #### To stop the container and remove volumes:
@@ -51,6 +49,7 @@ Admin panel available
 
 ### Instruction for run all app in docker containers
 
+* `Create .env file using .env_example_for_docker`
 * `docker network create todolist` - create network
 * `docker-compose up -d --build` - run
 * `docker-compose exec web python manage.py migrate --noinput` - migrate
