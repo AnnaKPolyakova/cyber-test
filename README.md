@@ -12,8 +12,7 @@ API for app todo list
 
 1) Users:  
 Any can register a user and receive a token for him
-<br>
-<br>
+
 2) Tasks: 
 Any registered user can:  
 - create, delete his own task, 
