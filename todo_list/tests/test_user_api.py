@@ -3,8 +3,12 @@ from http import HTTPStatus
 import pytest
 from django.contrib.auth import get_user_model
 
-from todo_list.tests.conftest import (EMAIL, ERROR_INFO, PASSWORD,
-                                      USER_REG_API_URL)
+from todo_list.tests.conftest import (
+    EMAIL,
+    ERROR_INFO,
+    PASSWORD,
+    USER_REG_API_URL
+)
 
 User = get_user_model()
 
