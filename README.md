@@ -1,10 +1,10 @@
 # cyber-test
 
-Technologies and requirements:
-Python 3.10
-django 4.2.7
-Poetry
-Postgresql
+Technologies and requirements:  
+Python 3.10  
+django 4.2.7  
+Poetry  
+Postgresql  
 
 ### About
 
