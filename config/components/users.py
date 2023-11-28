@@ -1,1 +1,1 @@
-AUTH_USER_MODEL = 'todo_list.User'
+AUTH_USER_MODEL = "todo_list.User"
